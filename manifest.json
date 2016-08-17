@@ -2,7 +2,7 @@
   "manifest_version": 2,
   "name": "fast-triage",
   "description": "Adds UI to make triage decisions on bugs faster",
-  "homepage-url": "https://github.com/emceeaich/fast-triage",
+  "homepage_url": "https://github.com/emceeaich/fast-triage",
   "version": "1.0",
 
   "content_scripts": [
