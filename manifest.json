@@ -1,12 +1,9 @@
 {
-
   "manifest_version": 2,
   "name": "fast-triage",
   "description": "Adds UI to make triage decisions on bugs faster",
   "homepage-url": "https://github.com/emceeaich/fast-triage",
   "version": "1.0",
-
-  /* run content on bug detail pages */
 
   "content_scripts": [
     {
@@ -16,13 +13,9 @@
     }
   ],
 
-  /* background script handles getting the users bugzilla API key so we can GET and POST */
-
   "background": {
     "scripts": ["background-script.js"]
-  }
-
-  /* need permissions to make XHR requests to bugzilla's API */
+  },
 
   "permissions": ["https://bugzilla.mozilla.org/rest/*"]
 }
