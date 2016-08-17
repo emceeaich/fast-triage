@@ -1,0 +1,25 @@
+div.injected { 
+    font-family: system-ui, -apple-system, -apple-system-font, BlinkMacSystemFont, 
+                'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+    font-size: 11px; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+    background-color: white;
+}
+div.injected table {
+    margin: .25em;
+    padding: .5em;
+    border: solid thin #000;
+    width: 100%;
+}
+div.injected table tr:first-of-type th {
+    border-bottom: solid thin #000;
+}
+
+div.injected .dismiss {
+    text-align: center;
+    cursor: pointer;
+}
