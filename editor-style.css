@@ -1,6 +1,4 @@
 div.injected { 
-    font-family: system-ui, -apple-system, -apple-system-font, BlinkMacSystemFont, 
-                'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
     font-size: 11px; 
     position: fixed;
     top: 0;
