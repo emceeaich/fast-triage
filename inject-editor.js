@@ -1,5 +1,18 @@
 // mozilla license boilerplate here
 
+
+function preflight() {
+  // set up listener for message from background script
+  chrome.runtime.onMessage.addListener(function(message){
+    if (message.hello === "ohai!") {
+      injectEditorView();
+    }
+  });
+
+  // hello background script!
+  chrome.runtime.sendMessage({"hello": "hi background script"});
+}
+
 function injectEditorView() {
   var injected = document.createElement('div');
   injected.className = 'injected';
@@ -13,6 +26,5 @@ function dismissEditorView() {
   document.querySelector('.injected').remove();
 }
 
-injectEditorView();
-
+preflight();
 
