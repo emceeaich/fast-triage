@@ -17,5 +17,5 @@
     "scripts": ["background-script.js"]
   },
 
-  "permissions": ["https://bugzilla.mozilla.org/rest/*","notifications"]
+  "permissions": ["https://bugzilla.mozilla.org/rest/*"]
 }

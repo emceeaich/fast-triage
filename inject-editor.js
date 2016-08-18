@@ -2,9 +2,11 @@
 
 
 function preflight() {
+
   // set up listener for message from background script
   chrome.runtime.onMessage.addListener(function(message){
-    if (message.hello === "ohai!") {
+    if (message.apiToken !== null) {
+      console.log('got api token', message.apiToken);
       injectEditorView();
     }
   });
