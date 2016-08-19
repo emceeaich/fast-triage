@@ -13,9 +13,6 @@
     }
   ],
 
-  "background": {
-    "scripts": ["background-script.js"]
-  },
-
   "permissions": ["https://bugzilla.mozilla.org/rest/*"]
+
 }

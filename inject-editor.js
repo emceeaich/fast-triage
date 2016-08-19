@@ -1,18 +1,25 @@
 // mozilla license boilerplate here
 
-
 function preflight() {
 
-  // set up listener for message from background script
-  chrome.runtime.onMessage.addListener(function(message){
-    if (message.apiToken !== null) {
-      console.log('got api token', message.apiToken);
-      injectEditorView();
-    }
-  });
+  var apiToken = null;
 
-  // hello background script!
-  chrome.runtime.sendMessage({"hello": "hi background script"});
+  console.log("api token via window.wrappedJSObject", window.wrappedJSObject.BUGZILLA.api_token);
+
+  if (window.wrappedJSObject.BUGZILLA && window.wrappedJSObject.BUGZILLA.api_token) {
+    apiToken = window.wrappedJSObject.BUGZILLA.api_token;
+  }
+
+  if (apiToken !== null) {
+    fetchBugData(apiToken);
+  } else if (apiToken === null) {
+    alert("You need to be logged into Bugzilla.");
+  }
+
+}
+
+function fetchBugData(apiToken) {
+  injectEditorView();
 }
 
 function injectEditorView() {
